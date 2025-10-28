@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currículum — Ricardo Rodriguez</title>
+  <style>
+    :root{--accent:#0b6cff;--bg:#f6f8fb;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f1724; line-height:1.45}
+    .container{max-width:900px; margin:32px auto; padding:24px}
+    header{display:flex; gap:20px; align-items:center}
+    .avatar{width:96px; height:96px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#7c3aed); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:28px}
+    h1{margin:0; font-size:28px}
+    .sub{color:var(--muted); margin-top:6px}
+    .card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(12,18,30,0.06); margin-top:18px}
+    .grid{display:grid; grid-template-columns:1fr 320px; gap:20px}
+    .section{margin-bottom:16px}
+    h2{margin:0 0 8px 0; font-size:16px; color:var(--accent)}
+    ul{margin:8px 0 0 0; padding-left:18px}
+    li{margin-bottom:6px}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:14px}
+    .project{border-left:3px solid rgba(11,108,255,0.12); padding:12px 12px 12px 16px; margin-bottom:12px; border-radius:6px}
+    .job-title{font-weight:600}
+    .muted{color:var(--muted); font-size:13px}
+    .skills{display:flex; flex-wrap:wrap; gap:8px}
+    .skill{background:#eef2ff; padding:6px 10px; border-radius:999px; font-size:13px}
+    @media (max-width:820px){.grid{grid-template-columns:1fr} .avatar{width:72px;height:72px;font-size:22px}}
+    /* Print */
+    @media print{body{background:#fff} .container{box-shadow:none} .card{box-shadow:none} a::after{content:""}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">RR</div>
+      <div>
+        <h1>Ricardo Rodriguez</h1>
+        <div class="sub">Estado de México, 57900 · <a href="mailto:rodriguezreyes288@gmail.com">rodriguezreyes288@gmail.com</a> · (+52) 55 6863 2810</div>
+        <div class="sub" style="margin-top:6px">INSTITUTO POLITÉCNICO NACIONAL — Ingeniera en Sistemas Computacionales (en curso)</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Left column: experiencia y proyectos -->
+      <main>
+        <div class="card">
+          <section class="section">
+            <h2>EXPERIENCIA Y PROYECTOS</h2>
+
+            <article class="project">
+              <div class="job-title">SISTEMA DE GESTIÓN Y CONTROL ESCOLAR WEB — Desarrollador web y Analista de Sistemas</div>
+              <div class="muted">Ciudad de México, México · Prevista para Julio 2027</div>
+              <p>Diseño e implementación de un sistema web para la gestión escolar con módulos de alumnos, profesores, tutores, grupos y horarios. Desarrollo en PHP, HTML, CSS y MySQL. Elaboración de documentación técnica, diagramas UML, casos de uso, base de datos y manuales. Aplicación de metodologías de análisis y diseño estructurado en equipo.</p>
+            </article>
+
+            <article class="project">
+              <div class="job-title">SISTEMA DE GESTIÓN HOSPITALARIA — Desarrollador web y Analista de Base de Datos</div>
+              <div class="muted">Ciudad de México, México · Febrero 2024 - Julio 2024</div>
+              <p>Desarrollo de un sistema web para la gestión de citas médicas, pacientes, doctores, recetas, consultorios y farmacia. Implementación con SQL Server y una interfaz en PHP, HTML y CSS. Incluye perfiles de usuario diferenciados, reglas de negocio para citas, análisis y diseño entidad-relación, normalización, pruebas y manuales.</p>
+            </article>
+
+            <article class="project">
+              <div class="job-title">DISEÑO DE RED DE CABLEADO ESTRUCTURADO — Diseñador de red</div>
+              <div class="muted">Ciudad de México, México · Febrero 2025 - Junio 2025</div>
+              <p>Diseño de una red con sistema de cableado estructurado utilizando Cisco Packet Tracer. Análisis de topologías, diagramas de red, direccionamiento IP y pruebas de conectividad. Trabajo en equipo, planificación y coordinación para cumplir los requerimientos del proyecto.</p>
+            </article>
+
+          </section>
+
+          <section class="section">
+            <h2>HABILIDADES TÉCNICAS</h2>
+            <div class="skills" style="margin-top:8px">
+              <span class="skill">Python</span>
+              <span class="skill">C</span>
+              <span class="skill">PHP</span>
+              <span class="skill">MySQL</span>
+              <span class="skill">SQL Server</span>
+              <span class="skill">Microsoft Office</span>
+              <span class="skill">Google Workspace</span>
+              <span class="skill">Cisco Packet Tracer</span>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Certificaciones:</strong>
+              <div class="muted">Google Cloud Computing Foundations Certificate</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>EDUCACIÓN</h2>
+            <div style="margin-top:6px">
+              <div class="job-title">INSTITUTO POLITÉCNICO NACIONAL</div>
+              <div class="muted">Ingeniera en Sistemas Computacionales (en curso)</div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <!-- Right column: contacto, idiomas y blandas -->
+      <aside>
+        <div class="card">
+          <section class="section">
+            <h2>CONTACTO</h2>
+            <div class="meta" style="margin-top:8px">
+              <div>Estado de México, 57900</div>
+              <div><a href="mailto:rodriguezreyes288@gmail.com">rodriguezreyes288@gmail.com</a></div>
+              <div>(+52) 55 6863 2810</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>IDIOMAS</h2>
+            <div class="muted">Inglés A2</div>
+          </section>
+
+          <section class="section">
+            <h2>HABILIDADES BLANDAS</h2>
+            <ul>
+              <li>Aprendizaje rápido</li>
+              <li>Trabajo en equipo</li>
+              <li>Flexibilidad</li>
+              <li>Comunicación efectiva</li>
+              <li>Adaptabilidad</li>
+              <li>Ética de trabajo sólida</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>RESUMEN RÁPIDO</h2>
+            <p class="muted" style="font-size:14px">Desarrollador web y analista con experiencia en proyectos académicos y prototipos para gestión escolar y hospitalaria. Manejo de bases de datos relacionales (MySQL, SQL Server) y herramientas de diseño de redes (Cisco Packet Tracer).</p>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <div style="text-align:center; margin-top:18px; color:var(--muted); font-size:13px">Página generada automáticamente — si quieres que la entregue en otro formato (PDF, Word) o cambios de estilo, dímelo.</div>
+  </div>
+</body>
+</html>
