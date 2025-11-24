@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llave Pública RSA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: #fafafa;
+            color: #333;
+        }
+
+       
+        .navbar {
+            background: #111;
+            padding: 15px 0;
+            color: white;
+        }
+
+        .nav-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        
+        .container {
+            width: 90%;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            text-align: center;
+            color: #555;
+        }
+
+        .skill-tag, .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: #111;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .skill-tag:hover,
+        .back-btn:hover {
+            background: #333;
+        }
+
+        
+        .pretty-title {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+      
+        .pretty-box {
+            background: #f5f5f7;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            overflow: hidden;
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ddd;
+        }
+
+        .pretty-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: #e5e5e7;
+            border-bottom: 1px solid #ccc;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .pretty-content {
+            padding: 20px;
+            font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+            font-size: 14px;
+            color: #222;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .center-buttons {
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Ricardo Rodriguez Reyes</div>
+        <ul class="nav-links">
+            <li><a href="CV.pdf" download>Descargar CV</a></li>
+           
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Llave Pública RSA</h1>
+        <p>Descarga o consulta aquí mi llave pública RSA.</p>
+        <a href="public.pem" download class="skill-tag">Descargar public.pem</a>
+    </header>
+
+    <section class="section">
+        <h2 class="pretty-title">Contenido de la Llave Pública</h2>
+
+        <div class="pretty-box">
+            <div class="pretty-header">
+                public.pem
+            </div>
+
+            <pre id="keyBox" class="pretty-content">Cargando llave pública...</pre>
+        </div>
+    </section>
+
+    
+    <div class="center-buttons">
+        <a href="CV.html" class="back-btn">⬅ Regresar a CV</a>
+    </div>
+
+</div>
+
+
+<script>
+fetch("public.pem")
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById("keyBox").textContent = text;
+    })
+    .catch(err => {
+        document.getElementById("keyBox").textContent = "No se pudo cargar la llave pública.";
+    });
+</script>
+
+</body>
+</html>
